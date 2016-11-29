@@ -1,0 +1,4 @@
+.pseudo-table__cell {
+    padding: 7px 10px;
+    display: table-cell;
+}
