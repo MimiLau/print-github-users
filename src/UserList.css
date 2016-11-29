@@ -24,15 +24,15 @@
 }
 
 .user--info {
-	background-color: #828282;
-	color: white;
+	background-color: #d6d6d6;
+	/*color: white;*/
 	padding: 6px;
-	margin-top: -25px;
+	margin: -25px 17px 0;
 	position: relative;
 }
 
-.user--info a {
-	color: white;
+.user--link:hover img {
+	opacity: 0.5;
 }
 
 .user--info a:hover {
