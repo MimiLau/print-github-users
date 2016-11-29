@@ -5,14 +5,23 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="app">
+        <div className="app-header">
           <h1>Red Ant Front-end Challenge</h1>
-          <p>Prints GitHub users</p>
+          <p>- Mimi Lau</p>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="row app-intro">
+			<div className="col-sm-6 text-sm-right">
+				<h2 className="app-intro--heading">Print GitHub Users</h2>
+			</div>
+			<div className="col-sm-6 text-sm-left">
+				<ul>
+					<li>Using API <code>https://api.github.com/users</code></li>
+					<li>Sort by user ID</li>
+					<li>Filtering</li>
+				</ul>
+			</div>
+        </div>
       </div>
     );
   }

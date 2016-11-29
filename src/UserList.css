@@ -1,4 +1,50 @@
+.pseudo-table {
+	display: table;
+	width: 100%;
+}
+
+.pseudo-table__row {
+	display: table-row;
+}
+
 .pseudo-table__cell {
-    padding: 7px 10px;
-    display: table-cell;
+	padding: 7px 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.ui-list {
+	list-style: none;
+	padding-left: 0;
+	line-height: 37px;
+}
+
+.user--img img {
+	max-width: 200px;
+}
+
+.user--info {
+	background-color: #828282;
+	color: white;
+	padding: 6px;
+	margin-top: -25px;
+	position: relative;
+}
+
+.user--info a {
+	color: white;
+}
+
+.user--info a:hover {
+	color: #bfbfbf;
+}
+
+.user--img-tag {
+	position: absolute;
+	right: 34px;
+	top: 19px;
+}
+
+.r-line {
+	border-right: 1px solid white;
 }

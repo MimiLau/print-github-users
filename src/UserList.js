@@ -1,49 +1,58 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 
+import User from './User';
+
+import './UserList.css';
+
 class UserList extends Component {
 	constructor(props) {
 		super(props);
+
+		this.onFilterClick = this.onFilterClick.bind(this);
 		this.state = {
-			person: []
+			person: [],
+			filterType: 'all'
 		};
 	}
 
 	componentDidMount() {
-		this.UserList();
+		this.getUserList();
 	}
 
-	UserList() {
+	getUserList() {
 		return $.getJSON('https://api.github.com/users').then((data) => {
 			this.setState({ person: data });
 		});
 	}
 
-	render() {
-		const persons = this.state.person.map((user, index) => {
-			return (
-				<li key={index} className="list-group-item">
-					<div className="pseudo-table__cell">
-						<img src={user.avatar_url} role="presentation" className="rounded-circle pull-xs-left" alt={user.login} width="150" height="150" />
-						<h4>{user.login}</h4>
-					</div>
-					<div>
-						<h2>{user.id} {user.login}</h2>
-					</div>
-					<p>{user.type}</p>
-					<img src={user.avatar_url} role="presentation"/>
-					<p>{user.url}</p>
-				</li>
-			);
+	onFilterClick(type) {
+		console.log(this.state.person.length);
+		console.log(type);
+		this.setState({
+			filterType: type
 		});
+	}
+
+	render() {
+		const persons = this.state.person.map((user) =>
+			<User
+				key={user.id}
+				user={user}
+			/>
+		);
 
 		return (
-			<div id="layout-content" className="layout-content-wrapper">
-				Filter:
-				<button>All</button>
-				<button>User</button>
-				<button>Organization</button>
-				<ul className="list-group">
+			<div className="container">
+				<div className="py-3">
+					Filter:
+					<div className="btn-group ml-1" role="group">
+						<button type="button" className="btn btn-secondary" onClick={this.onFilterClick}>All</button>
+						<button type="button" className="btn btn-secondary" onClick={this.onFilterClick}>User</button>
+						<button type="button" className="btn btn-secondary">Organization</button>
+					</div>
+				</div>
+				<ul className="row ui-list">
 					{persons}
 				</ul>
 			</div>
