@@ -1,7 +1,7 @@
 # The Red Ant Test
 
 This project can
-- Get JSON from API https://api.github.com/users
+- Get JSON from the API https://api.github.com/users
 - Sort by user ID ascendingly or descendingly
 - Filter user type
 
@@ -21,6 +21,7 @@ Build the app for production to the `build` folder. It bundles React in producti
 
 ## Technology
 
+* Create with : [Creat React App](https://github.com/facebookincubator/create-react-app)
 * JS frameworks : ReactJS
 * CSS frameworks : BootStrap-v4
 * Lint: ESLint

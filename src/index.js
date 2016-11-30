@@ -10,8 +10,8 @@ ReactDOM.render(
 		<UserList />
 		<footer className="text-muted">
 			<div className="container">
-				<p>Fork the <a href="https://github.com/MimiLau/redant-challenge">repository</a>. <code>npm install</code> and <code>npm start</code></p>
-				<p className="mb-0">Build with LOVE.</p>
+				<p className="float-md-left">Fork the <a href="https://github.com/MimiLau/redant-challenge">repository</a>. <code>npm install</code> and <code>npm start</code></p>
+				<p className="mb-0 float-md-right">Built with LOVE.</p>
 			</div>
 		</footer>
 	</div>,
