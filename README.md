@@ -1,8 +1,11 @@
-# Red Ant Test
+# The Red Ant Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project can
+- Get JSON from API https://api.github.com/users
+- Sort by user ID ascendingly or descendingly
+- Filter user type
 
-### Usage
+## Usage
 
 Install modules to app
 
@@ -16,13 +19,13 @@ Build the app for production to the `build` folder. It bundles React in producti
 
     npm run build
 
-### Technology
+## Technology
 
 * JS frameworks : ReactJS
 * CSS frameworks : BootStrap-v4
 * Lint: ESLint
 * Editor: Atom
 
-### Contact
+## Contact
 
 * Email : meiyanlau98234304@gmail.com
