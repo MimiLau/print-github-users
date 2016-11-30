@@ -1,4 +1,4 @@
-# The Red Ant Test - Print Github Users
+# The Red Ant Test - Print Github Users :busts_in_silhouette:
 
 This project can
 - Get JSON from the API https://api.github.com/users
