@@ -63,33 +63,44 @@ class UserList extends Component {
 		});
 	}
 
-	render() {
-		// users order by ID
-		let users = _sortBy(this.state.users, ['id']);
-		let searchString = this.state.searchString.trim().toLowerCase();
-
-		// filter the results
-		if (this.state.filterType) {
-			users = _filter(this.state.users, {'type': this.state.filterType});
-		}
-
-		// search the results.
-		if (searchString.length > 0) {
-			users = users.filter(obj => obj.login.match(searchString));
-		}
-
-		// sort by ID reversely
-		if (this.state.reverseSorting) {
-			users = users.reverse();
-		}
-
+	getFilteredUser(filtereUsers) {
 		// list the users
-		let rows = users.map((user) =>
+		let rows = filtereUsers.map((user) =>
 			<User
 				key={user.id}
 				user={user}
 			/>
 		);
+
+		if (filtereUsers.length !== 0) {
+			return (
+				<ul className="row ui-list">
+					{rows}
+				</ul>
+			);
+		} else return (<p className="my-3 text-xs-center"><i className="fa fa-meh-o" /> No results.</p>);
+	}
+
+	render() {
+		// users order by ID
+		let filtereUsers = _sortBy(this.state.users, ['id']);
+		let searchString = this.state.searchString.trim().toLowerCase();
+
+		// filter the results
+		if (this.state.filterType) {
+			filtereUsers = _filter(filtereUsers, {'type': this.state.filterType});
+		}
+
+		// search the results.
+		if (searchString.length > 0) {
+			filtereUsers = filtereUsers.filter(obj => obj.login.match(searchString));
+		}
+
+		// sort by ID reversely
+		if (this.state.reverseSorting) {
+			filtereUsers = filtereUsers.reverse();
+		}
+
 		return (
 			<main className="container">
 				<div className="py-3">
@@ -133,15 +144,12 @@ class UserList extends Component {
 							/>
 						</div>
 						<p className="float-sm-right ml-1 text--result">
-							{users.length} results
+							{filtereUsers.length} results
 						</p>
 					</div>
 				</div>
 				{this.state.users.length === 0 ?
-					<Loading /> :
-						<ul className="row ui-list">
-							{rows}
-						</ul>
+					<Loading /> : this.getFilteredUser(filtereUsers)
 				}
 			</main>
 		);
