@@ -1,4 +1,4 @@
-# The Red Ant Test
+# The Red Ant Test - Print Github Users
 
 This project can
 - Get JSON from the API https://api.github.com/users
