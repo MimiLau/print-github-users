@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 import _filter from 'lodash/filter';
 import _sortBy from 'lodash/sortBy';
-import _matches from 'lodash/matches';
-import _find from 'lodash/find';
 
 import User from './User';
 import Loading from './Loading';
@@ -93,7 +91,7 @@ class UserList extends Component {
 			/>
 		);
 		return (
-			<div className="container">
+			<main className="container">
 				<div className="py-3">
 					<div className="btn-toolbar" role="toolbar">
 						<div className="btn-group mb-1" role="group">
@@ -145,7 +143,7 @@ class UserList extends Component {
 							{rows}
 						</ul>
 				}
-			</div>
+			</main>
 		);
 	}
 }
