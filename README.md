@@ -4,7 +4,9 @@ This project can
 - Get JSON from the API https://api.github.com/users
 - Print github users
 - Sort by user ID ascendingly or descendingly
-- Filter user type
+- Filter by user type
+- Real-time search by user login name
+- Display number of results
 
 ## Usage
 
