@@ -99,9 +99,9 @@ class UserList extends Component {
 				</div>
 				{this.state.users.length === 0 ?
 					<Loading /> :
-					<ul className="row ui-list">
-						{rows}
-					</ul>
+						<ul className="row ui-list">
+							{rows}
+						</ul>
 				}
 			</div>
 		);
