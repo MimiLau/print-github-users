@@ -1,47 +1,39 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
-class User extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			person: []
-		};
-	}
+const User = (props) => {
+	const user = props.user;
 
-	render() {
-		const user = this.props.user;
-		return (
-			<li className="col-md-3 col-sm-4 mb-3">
-				<div className="user--img text-xs-center">
-					<a
-						href={user.html_url}
-						rel="noopener noreferrer"
-						target="_blank"
-						className="user--link"
-					>
-						<img
-							src={user.avatar_url}
-							role="presentation"
-							className="rounded-circle img-fluid"
-							alt={user.login}
-						/>
-					</a>
+	return (
+		<li className="col-lg-3 col-md-4 col-sm-6 mb-3">
+			<div className="user__img text-xs-center">
+				<a
+					href={user.html_url}
+					rel="noopener noreferrer"
+					target="_blank"
+					className="user__link"
+				>
+					<img
+						src={user.avatar_url}
+						role="presentation"
+						className="rounded-circle w-100"
+						alt={user.login}
+					/>
 					{
-						user.site_admin ? <span className="tag tag-success user--img-tag">admin</span> : null
+						user.site_admin ? <span className="tag tag-success user__img-tag">admin</span> : null
 					}
-				</div>
-				<div className="user--info text-xs-center rounded">
-					<h2 className="h5">
-						<span className="small">#{user.id}</span> {user.login}
-					</h2>
-					<div>
-						{user.type}
-					</div>
-				</div>
-			</li>
-		);
-	}
-}
+				</a>
+			</div>
+			<div className="user__info text-xs-center rounded">
+				<h2 className="h5">
+					<span className="small font-italic text-muted">#{user.id}</span> {user.login}
+				</h2>
+				<p className="user__type">
+					{user.type}
+				</p>
+			</div>
+		</li>
+	);
+};
 
 User.propTypes = {
 	user: PropTypes.object
