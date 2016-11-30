@@ -4,11 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Usage
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install modules to app
+
+    npm install
+
+Run the app in the development mode in [http://localhost:3000](http://localhost:3000).
 
     npm start
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. App is ready to be deployed.
+Build the app for production to the `build` folder. It bundles React in production mode and optimizes the build for the best performance. App is ready to be deployed.
 
     npm run build
 

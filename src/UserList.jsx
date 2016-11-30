@@ -75,26 +75,37 @@ class UserList extends Component {
 		return (
 			<div className="container">
 				<div className="py-3">
-					<div className="row">
-						<div className="col-md-7 mb-1">
-							Filter:
-							<div className="btn-group ml-1" role="group">
-								<button type="button" className={`btn btn-secondary ${!this.state.filterType ? 'active' : ''}`} onClick={this.onDeleteFilterClick}>All Type</button>
-								<button type="button" className={`btn btn-secondary ${this.state.filterType === 'User' ? 'active' : ''}`} onClick={this.onFilterClick} name="User">User</button>
-								<button type="button" className={`btn btn-secondary ${this.state.filterType === 'Organization' ? 'active' : ''}`} onClick={this.onFilterClick} name="Organization">Organization</button>
-							</div>
+					<div className="btn-toolbar" role="toolbar">
+						<div className="btn-group mb-1" role="group">
+							<button
+								type="button"
+								className={`btn btn-secondary ${!this.state.filterType ? 'active' : ''}`}
+								onClick={this.onDeleteFilterClick}
+							>
+								All Type
+							</button>
+							<button
+								type="button"
+								className={`btn btn-secondary ${this.state.filterType === 'User' ? 'active' : ''}`}
+								onClick={this.onFilterClick}
+								name="User"
+							>
+								User
+							</button>
+							<button
+								type="button"
+								className={`btn btn-secondary ${this.state.filterType === 'Organization' ? 'active' : ''}`}
+								onClick={this.onFilterClick} name="Organization"
+							>
+								Organization
+							</button>
 						</div>
-						<div className="col-md-5 mb-1 text-md-right">
-							Sort by ID:
-							<div className="btn-group ml-1" role="group">
-								<button type="button" className="btn btn-secondary" onClick={this.onSortClick} name="all">
-									{this.state.reverseSorting ? 'Desc' : 'Asc'}
-								</button>
-							</div>
-						</div>
-					</div>
-					<div className="text-md-center">
-						{users.length} results
+						<button type="button" className="btn btn-secondary mb-1" onClick={this.onSortClick} name="all">
+							{this.state.reverseSorting ? 'Desc' : 'Asc'}
+						</button>
+						<p className="float-sm-right ml-1">
+							{users.length} results
+						</p>
 					</div>
 				</div>
 				{this.state.users.length === 0 ?
