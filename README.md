@@ -8,7 +8,7 @@ This project can
 - Real-time search by user login name
 - Display number of results
 
-[!challenge.png]
+![project screenshot](challenge.png)
 
 ## Usage
 
