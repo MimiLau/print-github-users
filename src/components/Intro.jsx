@@ -1,5 +1,5 @@
 import React from 'react';
-import './Intro.css';
+import '../style/intro.css';
 
 const App = () => (
 	<header className="app-header text-xs-center">

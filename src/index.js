@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Intro from './Intro';
-import UserList from './UserList';
-import './index.css';
+import Intro from './components/Intro';
+import UserList from './components/UserList';
+import './style/index.css';
 
 ReactDOM.render(
 	<div>

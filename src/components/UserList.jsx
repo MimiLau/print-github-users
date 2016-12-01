@@ -3,10 +3,10 @@ import $ from 'jquery';
 import _filter from 'lodash/filter';
 import _sortBy from 'lodash/sortBy';
 
-import User from './User';
-import Loading from './Loading';
+import User from '../components/User';
+import Loading from '../components/Loading';
 
-import './UserList.css';
+import '../style/user-list.css';
 
 class UserList extends Component {
 	constructor(props) {
