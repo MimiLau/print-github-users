@@ -1,11 +1,11 @@
 # The Red Ant Test - Print Github Users :busts_in_silhouette:
 
-This project can
+This web app
 - Get JSON from the API https://api.github.com/users
 - Print github users
-- Sort by user ID ascendingly or descendingly
-- Filter by user type
-- Real-time search by user login name
+- Sort user ID ascendingly or descendingly
+- Filter user type
+- Real-time search user login name
 - Display number of results
 
 ![project screenshot](challenge.png)
