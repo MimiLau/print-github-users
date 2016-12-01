@@ -8,6 +8,8 @@ This project can
 - Real-time search by user login name
 - Display number of results
 
+[!challenge.png]
+
 ## Usage
 
 Install modules to app
@@ -17,6 +19,8 @@ Install modules to app
 Run the app in the development mode in [http://localhost:3000](http://localhost:3000).
 
     npm start
+
+## Build for production
 
 Build the app for production to the `build` folder. It bundles React in production mode and optimizes the build for the best performance. App is ready to be deployed.
 
